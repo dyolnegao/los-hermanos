@@ -1,7 +1,8 @@
 # Compass
 Grupo Los-Hermanos - Repositório dedicado ao projeto da matéria PRATICA PROFISSIONAL EM ANALISE E DESENVOLVIMENTO DE SISTEMAS 
 
-![COMPASS_LOGO3](https://user-images.githubusercontent.com/52939868/113489952-8cec3a00-949d-11eb-9d07-fa6c59c39d8f.png)
+![compass_logo_new](https://user-images.githubusercontent.com/52939868/116793762-1abc4480-aa9f-11eb-9058-364e8abb104f.png)
+
 
 # Sobre o Projeto
 Compass se trata deu um sistema web de recomendação de filmes, séries e livros, com um viés de rede social, o qual os 
