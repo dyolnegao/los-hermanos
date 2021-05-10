@@ -11,6 +11,8 @@ jinja2 = "==2.11.1"
 markupsafe = "==1.1.1"
 werkzeug = "==1.0.0"
 flask-sqlalchemy = "*"
+flask-login = "*"
+flask-migrate = "*"
 
 [requires]
 python_version = "3.8"

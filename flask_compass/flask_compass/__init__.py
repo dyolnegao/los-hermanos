@@ -1,8 +1,11 @@
 from flask import Flask 
 
 from .commands import create_tables
-from .models import User
+from .UsuarioModel import User
 from .extensions import db, login_manager
+from flask_compass.routes.main import main
+from flask_compass.routes.LoginController import LoginController
+from flask_compass.routes.AcessoController import AcessoController
 
 def create_app(config_file='settings.py'):
     app = Flask(__name__)
@@ -13,14 +16,15 @@ def create_app(config_file='settings.py'):
 
     login_manager.init_app(app)
 
-    #login_manager.login_view = 'auth.login'
+    login_manager.login_view = 'auth.login'
 
-    #@login_manager.user_loader
-    #def load_user(user_id):
-        #return User.query.get(user_id)
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(user_id)
 
-    #pp.register_blueprint(main)
-    #app.register_blueprint(auth)
+    app.register_blueprint(LoginController)
+    app.register_blueprint(AcessoController)
+    app.register_blueprint(main)
 
     app.cli.add_command(create_tables)
 

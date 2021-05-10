@@ -16,7 +16,7 @@
         <img src="{{url_for('static', filename='compass_logo_new.png')}}" class="is-centered"/>
         <div class="columns is-centered">
           <div class="column is-half">
-            <form method="POST">
+            <form method="POST" method="POST" action="{{ url_for('AcessoController.criarUsuario') }}">
               <div class="field">
                 <label class="label">Nome</label>
                 <p class="control has-icons-left">
@@ -64,7 +64,7 @@
               </div>
               <div class="field">
                 <p class="control">
-                  <button type="submit" class="button is-success is-centered">
+                  <button type="submit" class="button is-success is-centered" >
                     Submit
                   </button>
                 </p>

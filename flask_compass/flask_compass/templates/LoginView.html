@@ -16,7 +16,7 @@
         <img src="{{url_for('static', filename='compass_logo_new.png')}}"/>
         <div class="columns is-centered">
           <div class="column is-half">
-            <form method="POST">
+            <form method="POST" action="{{ url_for('LoginController.fazerLogin')}}">
               <div class="field">
                 <label class="label">Username</label>
                 <div class="control has-icons-left has-icons-right">
@@ -44,8 +44,8 @@
               </div>
               <div class="field">
                 <p class="control">
-                  <button type="submit" class="button is-success">
-                    Cadastre-se
+                  <button class="button is-success">
+                    <a href="{{ url_for('AcessoController.criarUsuario')}}">Cadastre-se</a>
                   </button>
                 </p>
               </div>
