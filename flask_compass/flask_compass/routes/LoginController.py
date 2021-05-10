@@ -17,7 +17,7 @@ def fazerLogin():
         error_message = ''
 
         if not user or not check_password_hash(user.password, password):
-            error_message = 'Could not login. Please check and try again.'
+            error_message = 'Senha errada'
 
         if not error_message:
             login_user(user)

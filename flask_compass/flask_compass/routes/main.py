@@ -8,3 +8,7 @@ main = Blueprint('main', __name__)
 @main.route('/home')
 def home():
     return render_template('home.html')
+
+@main.route('/cadastro')
+def cadastro():
+    return render_template('ItemView.html')

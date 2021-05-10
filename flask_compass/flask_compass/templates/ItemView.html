@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <img src="{{url_for('static', filename='compass_logo_new.png')}}" class="is-centered"/>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <form method="POST" method="POST" action="{{ url_for('ItemController.addItem') }}">
+              <div class="field">
+                   <label class="label">Tipo do Conteúdo</label>
+                    <div class="control has-icons-left">
+                        <div class="select is-fullwidth">
+                        <select name="tipo">
+                            <option>Filme</option>
+                            <option>Serie</option>
+                            <option>livro</option>
+                        </select>
+                        </div>
+                        <span class="icon is-small is-left">
+                           <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+               </div>
+              <div class="field">
+                <label class="label">Título</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="titulo" name="titulo" placeholder="Os Trombadinhas">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <label class="label">Diretor/Autor</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="diretor" name="diretor" placeholder="Anselmo Duarte">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">País de origem</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="pais" name="pais" placeholder="Brasil">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-flag"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <label class="label">Ano de origem</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="ano" name="ano" placeholder="1979">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <label class="label">Genêro</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="genero" name="genero" placeholder="Aventura">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button type="submit" class="button is-success is-centered" >
+                    Submit
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
