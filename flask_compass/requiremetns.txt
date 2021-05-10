@@ -1,0 +1,7 @@
+Flask== 1.1.1
+Flask-Login==0.5.0
+Flask-Migrate==2.7.0
+Flask-SQLAlchemy==2.5.1
+pylint==2.8.2
+SQLAlchemy==1.4.14
+Werkzeug==1.0.0
