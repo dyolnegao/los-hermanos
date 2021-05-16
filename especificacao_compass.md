@@ -417,7 +417,8 @@ Criadores de conteúdo: Poderão acessar as avaliações, comentários e crític
 
 # 9 Diagrama de Classes
 
-![DiagramaDeClasse](https://user-images.githubusercontent.com/52939868/113800359-2d0bc280-972d-11eb-92b0-38c8005252c5.jpeg)
+![DiagramaDeClasse_NovaVersaoII](https://user-images.githubusercontent.com/61977035/118413847-c789ea80-b677-11eb-8926-9902847fd23b.png)
+
 
 # 10 Wireframes
 
