@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash
 
 LoginController = Blueprint('LoginController', __name__)
 
-@LoginController.route('/login', methods=['GET', 'POST'])
+@LoginController.route('/', methods=['GET', 'POST'])
 def fazerLogin():
     if request.method == 'POST':
         username = request.form['username']

@@ -7,7 +7,7 @@ main = Blueprint('main', __name__)
 
 @main.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('AvaliaView.html')
 
 @main.route('/cadastro')
 def cadastro():

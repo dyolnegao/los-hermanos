@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_compass.extensions import db
-from flask_compass.AvaliaModel import Avalia
+from flask_compass.AvaliaModel import AvaliaItem
 
-AvaliaController = Blueprint('AvaliaController', __name__)
+AvaliaController = Blueprint('avaliaItem', __name__)
 
 @AvaliaController.route('/avaliaItem', methods=['GET', 'POST'])
 def addAvaliacao():
