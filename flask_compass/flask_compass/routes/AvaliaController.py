@@ -1,36 +1,37 @@
+from flask_sqlalchemy.utils import engine_config_warning
+from flask_compass.routes.ItemController import ItemController
+from flask_compass.ItemModel import Item
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_compass.extensions import db
 from flask_compass.AvaliaModel import AvaliaItem
 
 AvaliaController = Blueprint('avaliaItem', __name__)
+    
+@AvaliaController.route('/avaliaItem', methods=['GET', 'POST'])
+def avalia(item_id):
+    
+    item = ItemController.query.get_or_404(item_id)
+
+    if request.method == 'POST':
+        item.avaliacao = request.form['avaliacao']
+        item.nota = request.form['nota']
+        item.like = request.form['like']
+        db.session.commit()
+
+        return redirect(url_for('home'))
+
+    context = {
+        'item' : item
+    }
+
+    return render_template('AvaliaView.html', **context)
 
 @AvaliaController.route('/avaliaItem', methods=['GET', 'POST'])
-def addAvaliacao():
-    if request.method == 'POST':
-        comentario = request.form['comentario']
-        
-        avaliacao = Avaliacao(
-            comentario=comentario,             
-        )
+def index():
+    itens = Item.query.all()
 
-        db.session.add(avaliacao)
-        db.session.commit()
+    context = {
+        'itens' : itens
+    }
 
-        return redirect(url_for('AvaliaView.html'))
-
-    return render_template('AvaliaView.html')
-
-def addLike():
-    if request.method == 'POST':
-        like = request.button['like']
-        
-        like = Like(
-            like=like,             
-        )
-
-        db.session.add(like)
-        db.session.commit()
-
-        return redirect(url_for('AvaliaView.html'))
-
-    return render_template('AvaliaView.html')
+    return render_template('AvaliaView.html', **context)

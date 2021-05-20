@@ -99,63 +99,65 @@
             </article>
         </div>
     </div>
-
+    {% for item in itens %}
+    <a href="{{ url_for('AvaliaController.index', item_id=item.id) }}" class="list-group-item">
+      <h4 class="">{{ item.titulo }}</h4> 
     <div class="column is-half">
+      <div class="list-group-item">
+        <h1>{{ item.titulo }}</h1>      
+      </div>
     <div class="field"></p>
         <label class="label">Nota1</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Dê uma nota">
+          <p>{{ item.nota }}</p>      
+          <p>{{ item.avaliacao }}</p>      
         </div>
       </div>
         </p>
-      <div class="field">
-        <label class="label">Nota2</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Dê uma nota">
         </div>
-      </div>
+      {% endfor %}
 
-    <form method="POST" method="POST"></form>
-        <div class="control">
-            <button class="button is-link is-light">Like</button>
+    </form>
+    <form class="form-horizontal" method="POST" >
         </div>
-        <div class="field">
-            <label class="label">Nota</label>
-             <div class="control has-icons-left">
-                 <div class="select is-fullwidth">
-                 <select name="tipo">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
-                     <option>6</option>
-                     <option>7</option>
-                     <option>8</option>
-                     <option>9</option>
-                     <option>10</option>
-                 </select>
-                 </div>
-                 <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                 </span>
-             </div>
-        </div>
-        <div class="field">
-            <label class="label">Comentário</label>
+        <fieldset>
+          <div class="form-group">
             <div class="control">
-                <textarea class="textarea" placeholder="Faça um novo Comentário"></textarea>
+              <button name="like" class="button is-link is-light">Like</button>
+          </div>
+          <div class="field">
+              <label name="nota" class="label">Nota</label>
+               <div class="control has-icons-left">
+                   <div class="select is-fullwidth">
+                   <select name="tipo">
+                       <option>0</option>
+                       <option>1</option>
+                       <option>2</option>
+                       <option>3</option>
+                       <option>4</option>
+                       <option>5</option>
+                       <option>6</option>
+                       <option>7</option>
+                       <option>8</option>
+                       <option>9</option>
+                       <option>10</option>
+                   </select>
+                   </div>
+                   <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                   </span>
+               </div>
+            <label for="textArea" class="col-lg-2 control-label">Avaliação</label>
+            <div class="col-lg-10">
+              <textarea class="form-control" name="avaliacao" rows="5" id="textArea"></textarea>
             </div>
-            </div> 
-            <div class="field">
-                <p class="control">
-                  <button type="submit" class="button is-success is-centered" >
-                    Submit
-                  </button>
-                </p>
-            </div> 
-        </div> 
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset> 
     </form> 
   </section>
 </body>

@@ -8,4 +8,7 @@ class Item(db.Model):
     pais = db.Column(db.String(50))
     ano = db.Column(db.String(4))
     genero = db.Column(db.String(100))
+    avaliacao = db.Column(db.String(300))
+    nota = db.Column(db.Integer)
+    like = db.Column(db.Boolean)
 

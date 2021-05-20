@@ -31,3 +31,4 @@ def addItem():
         return redirect(url_for('main.home'))
 
     return render_template('ItemView.html')
+
