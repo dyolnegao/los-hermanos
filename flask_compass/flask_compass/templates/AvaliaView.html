@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-
 <body>
   <section class="section">
     <div class="columns is-4 is-multiline is-mobile">
@@ -17,8 +15,7 @@
                 <img src="{{url_for('static', filename='compass_logo_new.png')}}" class="is-centered"/>
             </figure>
         </div>
-
-      <div class="column is-one-quarter">
+      <div class="column is-gapless">
       <div class="field">
           <label class="label"></label>
           <div class="control">
@@ -26,26 +23,28 @@
           </div>
       </div>
       </div>
-      <div class="column is-one-quarter">
+      <div class="column is-gapless">
         <div class="field is-grouped"></div>
           <div class="control">
             <button class="button is-link is-success is-sentered">Buscar</button>
-            <div class="column is-one-quarter"></div>
-              <div class="control">
-                <button class="button is-link is-success is-sentered">
-                  <a href="{{ url_for('ItemController.addItem')}}">Adicionar Item</a>
-                </button>
-          </div>
-          </div>
+            
 
-    </div>
+          </div>
+      </div>
+      <div class="box has-background-light">
+      <div class="column is-gapless">
+        <div class="control">
+          <button class="button is-link is-success is-sentered">
+            <a href="{{ url_for('ItemController.addItem')}}">Adicionar Item</a>
+          </button>
+        </div>
+      </div>
+      </div>
     </div>
   </section>
-
   <section class="section">
+    <div class="box has-background-light">
     <div class="columns is-3 is-multiline is-mobile">
-
-
     <div class="column is-half">
         <div class="box">
             <article class="media">
@@ -59,7 +58,9 @@
                   <p>
                     <strong>Lucas</strong> <small>@Lucas</small> <small>31m</small>
                     <br>
-                    Sugestão de amizade
+                    Sugestão de Amizade
+                    <p>Itens Relacionados: Generos Politicos, Drama, Ação e Aventura:. "A Politica da Prudencia; O Ultimato Bournie; O Atirador"</p>
+
                   </p>
               </div>
             </article>
@@ -76,7 +77,8 @@
                   <p>
                     <strong>Dyol</strong> <small>@Dyol</small> <small>31m</small>
                     <br>
-                    Sugestão de amizade
+                    Sugestão de Amizade
+                    <p>Itens Relacionados: Generos Adulto, Comédia, Ficção:. "Bruna Surfistinha; Gente Grande; Harry Potter"</p>
                   </p>
               </div>
             </article>
@@ -93,28 +95,22 @@
                   <p>
                     <strong>Augusto Rosasco</strong> <small>@augusto</small> <small>31m</small>
                     <br>
-                    Sugestão de amizade
+                    Sugestão de Amizade
+                    <p>Itens Relacionados: Generos Economicos, Terror, Romance:. "A Riqueza das Nações; O Exorcismo de Emily Rose; Para Todos os Garotos que Ja Amei"</p>
                   </p>
               </div>
             </article>
         </div>
     </div>
-
     <div class="column is-half">
-    <div class="field"></p>
-        <label class="label">Nota1</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Dê uma nota">
-        </div>
+      <div class="box">
+        <label class="label">"Era Uma Vez em... Hollywood"</label>
+        <p>@Victor:. "Melhor Filme de Todos.... Meus Deus!!!" Nota: 10</p>
+        <p>@Talita:. "Adoro o Leo!" Nota: 10</p>
+        <p>@KarinaWaggen:. "O Roteiro inspira. Um verdadeiro Classico" Nota: 9</p>
+        <p>@DonaldTrump:. "Amazing, like everything made by America" Nota: 10</p>
       </div>
         </p>
-      <div class="field">
-        <label class="label">Nota2</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Dê uma nota">
-        </div>
-      </div>
-
     <form method="POST" method="POST"></form>
         <div class="control">
             <button class="button is-link is-light">Like</button>
@@ -156,7 +152,8 @@
                 </p>
             </div> 
         </div> 
-    </form> 
+    </form>
+  </box>
   </section>
 </body>
 </html>
