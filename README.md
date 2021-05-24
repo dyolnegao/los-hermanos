@@ -12,6 +12,7 @@ usuários poderam interagir entre si, com um design responsivo e leve, podendo s
 - Link para o nosso Trello -> [Trello](https://trello.com/b/1RqylFYk/compass-sistema-web-los-hermanos)
 - Hello World -> [Hello World - Compass - Flask based](https://agile-refuge-63480.herokuapp.com/)
 - Link para o site na nuvem -> https://flask-compass-deploy.herokuapp.com/
+- Link para o Video de explicação (N2) -> https://youtu.be/F03uC4Ldv8A
 
 # Integrantes 
 
